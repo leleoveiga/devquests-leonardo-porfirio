@@ -40,6 +40,13 @@ final class EmptyView: UIView {
         return label
     }()
     
+    private var searchButton: UIButton = {
+        let button = UIButton()
+        button.setTitleColor(.systemBlue, for: .normal)
+        button.setTitle("Search", for: .normal)
+        return button
+    }()
+    
     init() {
         
         super.init(frame: .zero)
@@ -59,6 +66,7 @@ final class EmptyView: UIView {
 
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(subtitleLabel)
+        stackView.addArrangedSubview(searchButton)
         addSubview(stackView)
     }
     
