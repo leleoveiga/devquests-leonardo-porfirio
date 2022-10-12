@@ -15,7 +15,7 @@ final class EmptyView: UIView {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 32
+        stackView.spacing = 8
         return stackView
     }()
     
