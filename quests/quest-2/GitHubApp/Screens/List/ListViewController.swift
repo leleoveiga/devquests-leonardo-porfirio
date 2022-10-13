@@ -43,17 +43,20 @@ final class ListViewController: UIViewController, UISearchBarDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
 
-        service.fetchList { repositories in
-
-            DispatchQueue.main.async {
-
-                self.listView.updateView(with: repositories)
-            }
-        }
+        fetchRepositories()
 
     }
 
     override func loadView() {
         self.view = listView
+    }
+    
+    func fetchRepositories() {
+        listView.addLoadingView()
+        service.fetchList { repositories in
+
+            self.listView.updateView(with: repositories)
+//            self.listView.updateView(with: []) // test with empty response
+        }
     }
 }
