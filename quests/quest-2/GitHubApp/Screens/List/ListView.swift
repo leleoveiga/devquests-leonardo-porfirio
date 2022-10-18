@@ -52,8 +52,8 @@ final class ListView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addLoadingView() {
-        addSubview(loadingView)
+    func showLoadingView() {
+        loadingView.isHidden = false
     }
 }
 
@@ -99,11 +99,11 @@ private extension ListView {
 extension ListView {
 
     func updateView(with repositories: [String]) {
+        loadingView.isHidden = true
         if !repositories.isEmpty {
-            loadingView.removeFromSuperview()
-            emptyView.removeFromSuperview()
+            emptyView.isHidden = true
         } else {
-            addSubview(emptyView)
+            emptyView.isHidden = false
         }
         self.listItems = repositories
         self.tableView.reloadData()

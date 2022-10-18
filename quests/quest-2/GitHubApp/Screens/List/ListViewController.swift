@@ -52,11 +52,9 @@ final class ListViewController: UIViewController, UISearchBarDelegate {
     }
     
     func fetchRepositories() {
-        listView.addLoadingView()
+        listView.showLoadingView()
         service.fetchList { repositories in
-
             self.listView.updateView(with: repositories)
-//            self.listView.updateView(with: []) // test with empty response
         }
     }
 }
