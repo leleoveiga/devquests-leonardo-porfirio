@@ -66,6 +66,7 @@ private extension ListView {
     func configureSubviews() {
 
         addSubview(self.tableView)
+        addSubview(self.emptyView)
         addSubview(self.loadingView)
     }
 
@@ -78,10 +79,6 @@ private extension ListView {
             self.tableView.topAnchor.constraint(equalTo: self.topAnchor),
             self.tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
-//            self.emptyView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-//            self.emptyView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-//            self.emptyView.topAnchor.constraint(equalTo: self.topAnchor),
-//            self.emptyView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
             
             self.loadingView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.loadingView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
