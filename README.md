@@ -3,10 +3,10 @@
 This is a side project to deepen my knowledge in iOS development, with the help of Devpass. This is an iOS app which integrates with GitHub API to show a user's repository list, with navigation to a repository's details. During the Dev Sprint, we also follow good practices of both Git flow and Agile development.
 
 <p float="left">
-<img src="screenshots/screenshot-1.png" alt="drawing" width="200"/>
-<img src="screenshots/screenshot-2.png" alt="drawing" width="200"/>
-<img src="screenshots/screenshot-3.png" alt="drawing" width="200"/>
-<img src="screenshots/screenshot-4.png" alt="drawing" width="200"/>
+<img src="https://github.com/devpass-tech/challenge-github-app/blob/main/screenshots/screenshot-1.png?raw=true" alt="drawing" width="200"/>
+<img src="https://github.com/devpass-tech/challenge-github-app/blob/main/screenshots/screenshot-2.png?raw=true" alt="drawing" width="200"/>
+<img src="https://github.com/devpass-tech/challenge-github-app/blob/main/screenshots/screenshot-3.png?raw=true" alt="drawing" width="200"/>
+<img src="https://github.com/devpass-tech/challenge-github-app/blob/main/screenshots/screenshot-4.png?raw=true" alt="drawing" width="200"/>
 </p>
 
 # About Devpass
