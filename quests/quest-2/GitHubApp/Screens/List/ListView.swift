@@ -99,14 +99,16 @@ private extension ListView {
 extension ListView {
 
     func updateView(with repositories: [String]) {
-        loadingView.isHidden = true
-        if !repositories.isEmpty {
-            emptyView.isHidden = true
-        } else {
-            emptyView.isHidden = false
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = true
+            if !repositories.isEmpty {
+                self.emptyView.isHidden = true
+            } else {
+                self.emptyView.isHidden = false
+            }
+            self.listItems = repositories
+            self.tableView.reloadData()
         }
-        self.listItems = repositories
-        self.tableView.reloadData()
     }
 }
 
