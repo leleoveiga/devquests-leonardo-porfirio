@@ -27,18 +27,18 @@ class Service {
         
     }
     
-    func fetchUser(user: String, _ completion: @escaping (User?) -> Void) {
-        let url = URL(string: "https://api.github.com/users/\(user)")!
-        
-        URLSession.shared.dataTask(with: url) { data, res, err in
-            guard err == nil, let data else {
-                completion(nil)
-                return
-            }
-            
-            let jsonDecodable = JSONDecoder()
-            let user = try? jsonDecodable.decode(User.self, from: data)
-            completion(user)
-        }.resume()
-    }
+//    func fetchUser(user: String, _ completion: @escaping (User?) -> Void) {
+//        let url = URL(string: "https://api.github.com/users/\(user)")!
+//        
+//        URLSession.shared.dataTask(with: url) { data, res, err in
+//            guard err == nil, let data else {
+//                completion(nil)
+//                return
+//            }
+//            
+//            let jsonDecodable = JSONDecoder()
+//            let user = try? jsonDecodable.decode(User.self, from: data)
+//            completion(user)
+//        }.resume()
+//    }
 }

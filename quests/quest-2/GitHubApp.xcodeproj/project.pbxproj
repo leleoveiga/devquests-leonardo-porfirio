@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1041CD1B2907187500638E7F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1041CD1A2907187500638E7F /* User.swift */; };
 		10BA226F28F7146C0085F627 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA226E28F7146C0085F627 /* LoadingView.swift */; };
 		98252C21279200C900199ECC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98252C20279200C900199ECC /* Repository.swift */; };
 		9826D8BE2788B40800E05400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9826D8BD2788B40800E05400 /* Assets.xcassets */; };
@@ -45,7 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1041CD1A2907187500638E7F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		10BA226E28F7146C0085F627 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		98252C20279200C900199ECC /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		9826D8B12788B40600E05400 /* GitHubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,7 +163,6 @@
 			isa = PBXGroup;
 			children = (
 				98252C20279200C900199ECC /* Repository.swift */,
-				1041CD1A2907187500638E7F /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,7 +353,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1041CD1B2907187500638E7F /* User.swift in Sources */,
 				9826D8FE2788B43F00E05400 /* Service.swift in Sources */,
 				D16FF2E1289856CA00F08BD2 /* EmptyView.swift in Sources */,
 				9826D90A2788B48000E05400 /* AppDelegate.swift in Sources */,

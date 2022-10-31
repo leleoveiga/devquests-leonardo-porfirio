@@ -65,10 +65,10 @@ extension ListViewController {
     }
     
     func fetchUserFrom(username: String) {
-        var user: User? = nil
-        service.fetchUser(user: username) { data in
-            user = data
-        }
+//        var user: User? = nil
+//        service.fetchUser(user: username) { data in
+//            user = data
+//        }
     }
 }
 
