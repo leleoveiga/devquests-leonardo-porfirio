@@ -6,11 +6,11 @@
 //
 
 import Foundation
+import UIKit
 
 class Service {
     
-
-    func fetchList(user: String, _ completion: @escaping ([String]) -> Void) {
+    func fetchList(user: String, _ completion: @escaping ([Repository]) -> Void) {
         let url = URL(string: "https://api.github.com/users/\(user)/repos")!
         
         URLSession.shared.dataTask(with: url) { data, res, err in
@@ -22,23 +22,8 @@ class Service {
             let repository = try? jsonDecodable.decode([Repository].self, from: data)
             dump(repository)
             
-            completion([])
+            completion(repository ?? [])
         }.resume()
-        
     }
     
-//    func fetchUser(user: String, _ completion: @escaping (User?) -> Void) {
-//        let url = URL(string: "https://api.github.com/users/\(user)")!
-//        
-//        URLSession.shared.dataTask(with: url) { data, res, err in
-//            guard err == nil, let data else {
-//                completion(nil)
-//                return
-//            }
-//            
-//            let jsonDecodable = JSONDecoder()
-//            let user = try? jsonDecodable.decode(User.self, from: data)
-//            completion(user)
-//        }.resume()
-//    }
 }

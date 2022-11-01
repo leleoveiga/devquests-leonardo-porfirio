@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1078D169291084E6003F3000 /* ListViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078D168291084E6003F3000 /* ListViewTableViewCell.swift */; };
 		10BA226F28F7146C0085F627 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA226E28F7146C0085F627 /* LoadingView.swift */; };
 		98252C21279200C900199ECC /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98252C20279200C900199ECC /* Repository.swift */; };
 		9826D8BE2788B40800E05400 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9826D8BD2788B40800E05400 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1078D168291084E6003F3000 /* ListViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTableViewCell.swift; sourceTree = "<group>"; };
 		10BA226E28F7146C0085F627 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		98252C20279200C900199ECC /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		9826D8B12788B40600E05400 /* GitHubApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 			children = (
 				9826D8F72788B43F00E05400 /* ListViewController.swift */,
 				9826D8F82788B43F00E05400 /* ListView.swift */,
+				1078D168291084E6003F3000 /* ListViewTableViewCell.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9826D8FE2788B43F00E05400 /* Service.swift in Sources */,
+				1078D169291084E6003F3000 /* ListViewTableViewCell.swift in Sources */,
 				D16FF2E1289856CA00F08BD2 /* EmptyView.swift in Sources */,
 				9826D90A2788B48000E05400 /* AppDelegate.swift in Sources */,
 				9826D90B2788B48000E05400 /* SceneDelegate.swift in Sources */,

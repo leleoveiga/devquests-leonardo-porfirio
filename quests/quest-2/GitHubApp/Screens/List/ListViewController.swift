@@ -63,13 +63,6 @@ extension ListViewController {
             self.listView.updateView(with: repositories)
         }
     }
-    
-    func fetchUserFrom(username: String) {
-//        var user: User? = nil
-//        service.fetchUser(user: username) { data in
-//            user = data
-//        }
-    }
 }
 
 // MARK: searchBarController
@@ -81,7 +74,6 @@ extension ListViewController: UISearchResultsUpdating {
         
         var filterString: String?
         filterString = searchController.searchBar.text
-        
         
         if let filterString {
             self.fetchRepositoriesFrom(username: filterString)

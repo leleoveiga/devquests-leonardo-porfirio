@@ -16,14 +16,15 @@ final class ListView: UIView {
 
     private let listViewCellIdentifier = "ListViewCellIdentifier"
 
-    private var listItems: [String] = []
+    private var listItems: [Repository] = []
 
     private lazy var tableView: UITableView = {
 
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.listViewCellIdentifier)
+        tableView.register(ListViewCell.self, forCellReuseIdentifier: self.listViewCellIdentifier)
         tableView.dataSource = self
+        tableView.rowHeight = 100
         return tableView
     }()
 
@@ -98,14 +99,10 @@ private extension ListView {
 
 extension ListView {
 
-    func updateView(with repositories: [String]) {
+    func updateView(with repositories: [Repository]) {
         DispatchQueue.main.async {
             self.loadingView.isHidden = true
-            if !repositories.isEmpty {
-                self.emptyView.isHidden = true
-            } else {
-                self.emptyView.isHidden = false
-            }
+            self.emptyView.isHidden = !repositories.isEmpty
             self.listItems = repositories
             self.tableView.reloadData()
         }
@@ -118,12 +115,16 @@ extension ListView: UITableViewDataSource {
 
         return self.listItems.count
     }
+    
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.listViewCellIdentifier)!
-        cell.textLabel?.text = self.listItems[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.listViewCellIdentifier, for: indexPath) as! ListViewCell
+        let repository = self.listItems[indexPath.row]
+        cell.repository = repository
+        
+        
         return cell
     }
+    
 }
 
