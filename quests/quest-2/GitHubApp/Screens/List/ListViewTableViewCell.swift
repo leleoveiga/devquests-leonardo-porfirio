@@ -45,19 +45,10 @@ class ListViewCell: UITableViewCell {
         imgView.clipsToBounds = true
         return imgView
     }()
-    
-    private let chevronIconImage: UIImageView = {
-        let imgView = UIImageView(image: UIImage(systemName: "chevron.right")?.withRenderingMode(.alwaysTemplate))
-        imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.tintColor = .gray
-        imgView.contentMode = .scaleAspectFit
-        imgView.clipsToBounds = true
-        return imgView
-    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
+        accessoryType = .disclosureIndicator
         setupSubviews()
         setupConstraints()
     }
@@ -68,7 +59,6 @@ class ListViewCell: UITableViewCell {
         repositoryImage.layer.cornerRadius = imageSize / 2
         addSubview(repositoryNameLabel)
         addSubview(repositoryOwnerUsernameLabel)
-        addSubview(chevronIconImage)
     }
     
     func setupConstraints() {
@@ -76,24 +66,18 @@ class ListViewCell: UITableViewCell {
             repositoryNameLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 30),
             repositoryNameLabel.bottomAnchor.constraint(equalTo: repositoryOwnerUsernameLabel.topAnchor, constant: -5),
             repositoryNameLabel.leadingAnchor.constraint(equalTo: repositoryImage.trailingAnchor),
-            repositoryNameLabel.trailingAnchor.constraint(equalTo: chevronIconImage.leadingAnchor),
+            repositoryNameLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
             repositoryOwnerUsernameLabel.topAnchor.constraint(equalTo: repositoryNameLabel.bottomAnchor),
             repositoryOwnerUsernameLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -30),
             repositoryOwnerUsernameLabel.leadingAnchor.constraint(equalTo: repositoryNameLabel.leadingAnchor),
-            repositoryOwnerUsernameLabel.trailingAnchor.constraint(equalTo: chevronIconImage.leadingAnchor),
+            repositoryOwnerUsernameLabel.trailingAnchor.constraint(equalTo: self.leadingAnchor),
             
             repositoryImage.widthAnchor.constraint(equalToConstant: imageSize),
             repositoryImage.heightAnchor.constraint(equalToConstant: imageSize),
             repositoryImage.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             repositoryImage.trailingAnchor.constraint(equalTo: repositoryNameLabel.leadingAnchor, constant: -15),
             repositoryImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 15),
-            
-            chevronIconImage.leadingAnchor.constraint(equalTo: repositoryNameLabel.trailingAnchor),
-            chevronIconImage.widthAnchor.constraint(equalToConstant: 20),
-            chevronIconImage.heightAnchor.constraint(equalToConstant: 20),
-            chevronIconImage.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            chevronIconImage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10)
         ])
     }
     

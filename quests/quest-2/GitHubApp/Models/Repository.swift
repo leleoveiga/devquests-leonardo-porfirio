@@ -6,11 +6,6 @@ import Foundation
 struct Repository: Codable {
     let name: String
     let owner: Owner
-
-    enum CodingKeys: String, CodingKey {
-        case name = "name"
-        case owner = "owner"
-    }
 }
 
 // MARK: - Owner

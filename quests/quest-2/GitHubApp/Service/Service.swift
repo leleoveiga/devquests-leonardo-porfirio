@@ -11,7 +11,10 @@ import UIKit
 class Service {
     
     func fetchList(user: String, _ completion: @escaping ([Repository]) -> Void) {
-        let url = URL(string: "https://api.github.com/users/\(user)/repos")!
+        guard let url = URL(string: "https://api.github.com/users/\(user)/repos") else {
+            return
+        }
+        
         
         URLSession.shared.dataTask(with: url) { data, res, err in
             guard err == nil, let data = data else {

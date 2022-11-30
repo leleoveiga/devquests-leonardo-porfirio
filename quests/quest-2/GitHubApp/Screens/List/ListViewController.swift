@@ -44,10 +44,6 @@ final class ListViewController: UIViewController, UISearchBarDelegate {
         
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        fetchRepositoriesFrom(username: "leleoveiga")
-    }
-
     override func loadView() {
         self.view = listView
     }
