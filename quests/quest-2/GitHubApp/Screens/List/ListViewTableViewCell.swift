@@ -39,10 +39,11 @@ class ListViewCell: UITableViewCell {
     }()
     
     private let imageSize: CGFloat = 50
-    private let repositoryImage: UIImageView = {
+    private lazy var repositoryImage: UIImageView = {
         let imgView = UIImageView(image: UIImage(systemName: "person"))
         imgView.translatesAutoresizingMaskIntoConstraints = false
         imgView.clipsToBounds = true
+        imgView.layer.cornerRadius = imageSize / 2
         return imgView
     }()
 
@@ -56,7 +57,6 @@ class ListViewCell: UITableViewCell {
 
     func setupSubviews() {
         addSubview(repositoryImage)
-        repositoryImage.layer.cornerRadius = imageSize / 2
         addSubview(repositoryNameLabel)
         addSubview(repositoryOwnerUsernameLabel)
     }

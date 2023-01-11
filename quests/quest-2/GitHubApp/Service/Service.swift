@@ -6,9 +6,8 @@
 //
 
 import Foundation
-import UIKit
 
-class Service {
+struct Service {
     
     func fetchList(user: String, _ completion: @escaping ([Repository]) -> Void) {
         guard let url = URL(string: "https://api.github.com/users/\(user)/repos") else {
@@ -23,7 +22,6 @@ class Service {
             }
             let jsonDecodable = JSONDecoder()
             let repository = try? jsonDecodable.decode([Repository].self, from: data)
-            dump(repository)
             
             completion(repository ?? [])
         }.resume()
